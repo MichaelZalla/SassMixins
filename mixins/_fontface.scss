@@ -1,0 +1,38 @@
+/**
+ * @file _fontface.scss
+ * @author Michael Zalla
+ * @date 9-12-2014
+ * 
+ * Sass shorthand mixin for making new fonts available to Sass projects. Note
+ * that certain parameters are given default values. The mixin also provides
+ * font weight variables that may be overwritten before or after you @include
+ * this mixin. Source declarations follow Paul Irish's suggested 'bulletproof'
+ * @font-face format.
+ *
+ * (http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)
+ */
+
+$font-weight-light: 	200 !default;
+$font-weight-semilight: 300 !default;
+$font-weight-regular: 	400 !default;
+$font-weight-semibold: 	500 !default;
+$font-weight-bold: 		700 !default;
+
+@mixin fontface($family, $source,
+				$weight: $font-weight-regular,
+				$style: normal) {
+
+	@font-face {
+		
+		font-family: 	$family;
+		font-style: 	$style;
+		font-weight: 	$weight;
+
+		src: url('#{$source}.eot?') format('eot'),
+			 url('#{$source}.woff') format('woff'),
+			 url('#{$source}.otf ') format('opentype'),
+			 url('#{$source}.ttf ') format('truetype');
+	
+	}
+
+}

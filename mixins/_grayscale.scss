@@ -1,0 +1,19 @@
+/**
+ * @file _grayscale.scss
+ * @author Michael Zalla
+ * @date 5-30-2014
+ * 
+ * Contains a Sass placeholder designed to completely desaturate the contents
+ * of the elements to which it is applied.
+ */
+
+%grayscale {
+	// Credit to Karl Horky for this cross-browser solution
+	// (http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html)
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); // Firefox 10+, Firefox on Android
+    filter: gray; // IE6-9
+    -webkit-filter: grayscale(100%); // Chrome 19+, Safari 6+, Safari 6+ iOS
+    // Fix for blurry filtering on Retina displays
+	// (http://stackoverflow.com/questions/13866577)
+    -webkit-transform: translateZ(0);
+}

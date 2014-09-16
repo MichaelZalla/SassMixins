@@ -1,0 +1,39 @@
+/**
+ * @file _typeset.scss
+ * @author Michael Zalla
+ * @date 9-12-2014
+ * 
+ * Contains a Sass mixin designed to easily decorate CSS classes
+ * and other selectors with a collection of font-related properties.
+ * Note that all parameters are provided with default values.
+ *
+ * That $type-base-point-size and $type-base-line-height can be defined
+ * elswhere (before or after the '@include') in your Sass project environment
+ * if necessary.
+ */
+
+// Variable defaults (can be overwritten but will not overwrite)
+
+$type-base-point-size: 16px !default; // (default for most browsers)
+
+// Justification for unitless line heights for web
+// (http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights)
+$type-base-line-height: 1.5 !default;
+
+$font-weight-regular: 400 !default;
+
+@mixin typeset(   $fontSize: $type-base-point-size,
+	 			$lineHeight: $type-base-line-height,
+	 		 $letterSpacing: normal,
+				$fontFamily: "HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande",
+				$fontWeight: $font-weight-regular,
+				 $fontStyle: normal) {
+
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	letter-spacing: $letterSpacing;
+	font-family: $fontFamily, sans-serif;
+	font-weight: $fontWeight;
+	font-style: $fontStyle;
+
+}

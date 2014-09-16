@@ -1,0 +1,18 @@
+/**
+ * @file _vendorize.scss
+ * @author Michael Zalla
+ * @date 5-29-2014
+ * 
+ * Contains a Sass mixin designed to generate a list of vendor-
+ * prefixed CSS property-value pairs. Note that this mixin does not
+ * provide modified values for vendor properties that expect values
+ * in a different format (e.g. – linear gradients, etc).
+ */
+
+@mixin vendorize($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}

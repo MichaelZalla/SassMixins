@@ -1,0 +1,20 @@
+/**
+ * @file _background.scss
+ * @author Michael Zalla
+ * @date 9-30-2014
+ * 
+ * Contains a Sass mixin designed to be used as a shorthand
+ * for declaring a set of background properties for an element.
+ */
+
+@mixin background( 	$imagePath,
+					$size: cover,
+					$position: center,
+					$repeat: no-repeat) {
+
+	background-image: url(#{$imagePath});
+	background-size: $size;
+	background-position: $position;
+	background-repeat: $repeat;
+
+}

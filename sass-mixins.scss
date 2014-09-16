@@ -1,0 +1,64 @@
+/**
+ * @file sass-mixins.scss
+ * @author Michael Zalla
+ * @date 9-16-2014
+ *
+ * Imports a collection of Sass mixins designed to simplify common styling tasks.
+ */
+
+/**
+ * @desc 	Allows you to assign one value to multiple properties simultaneously
+ * @param 	$values[] 	A list of properties followed by a single property value
+ * @example '@import same(padding-left, padding-right, 18px);'
+ */
+@import "mixins/same";
+
+/**
+ * @desc 	Auto-prefixing for CSS properties that are still experimental/proprietary
+ * @param 	$property The base name of a given property
+ * @param 	$value The value to assign to that property
+ * @example '@import vendorize("transition", color 0.5s linear);'
+ */
+@import "mixins/vendorize";
+
+/**
+ * @desc 	Allows you to quickly make new web fonts available in your stylesheets
+ * @param 	$family A chosen name that you'll use to reference the font
+ * @param 	$source An absolute or relative path to the font file
+ * @param 	$weight (optional)
+ * @param 	$style (optional)
+ * @example '@import fontface("Avenir", "../fonts/avenir/Avenir-Regular");'
+ */
+@import "mixins/fontface";
+
+/**
+ * @desc 	Provides a shorthand for declaring common typographic styles
+ * @param 	$fontSize (optional)
+ * @param 	$lineHeight (optional)
+ * @param 	$letterSpacing (optional)
+ * @param 	$fontFamily (optional)
+ * @param 	$fontWeight (optional)
+ * @param 	$fontStyle (optional)
+ * @example '@import typeset(1.125rem, 1.5, 0em, "Avenir");'
+ */
+@import "mixins/typeset";
+
+/**
+ * @desc 	Provides a shorthand for applying background images to elements
+ * @param 	$imagePath
+ * @param 	$size (optional)
+ * @param 	$position (optional)
+ * @param 	$repeat (optional)
+ * @example '@import background("../img/hero-background.jpg");'
+ */
+@import "mixins/background";
+
+/**
+ * @desc Provides a (mostly) cross-browser grayscale filter for visual elements
+ * @example '@extend grayscale;'
+ */
+@import "mixins/grayscale";
+
+// Note: Directory imports are yet to be implemented in the native Sass language
+// One solution is the Sass Globbing Plugin (https://github.com/chriseppstein/sass-globbing),
+// but this creates an additional dependency for projects with multiple authors.

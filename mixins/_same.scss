@@ -1,0 +1,16 @@
+/**
+ * @file _same.scss
+ * @author Alcides Queiroz Aguiar
+ * @date 5-28-2014
+ * 
+ * Mixin offering a shorthand for assigning a single value to multiple CSS
+ * properties (https://github.com/sass/sass/issues/109#issuecomment-44480053).
+ */
+
+@mixin same($values...) {
+	$len: length($values);
+	$value: nth($values, $len);
+	@for $i from 1 to $len {
+		#{nth($values, $i)}: $value;
+	}
+}
