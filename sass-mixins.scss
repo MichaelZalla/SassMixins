@@ -3,8 +3,12 @@
  * @author Michael Zalla
  * @date 9-16-2014
  *
- * Imports a collection of Sass mixins designed to simplify common styling tasks.
+ * Provides a collection of Sass mixins designed to simplify common styling tasks.
  */
+
+// Note: Directory imports are yet to be implemented in the native Sass language
+// One solution is the Sass Globbing Plugin (https://github.com/chriseppstein/sass-globbing),
+// but this creates an additional dependency for projects with multiple authors.
 
 /**
  * @desc 	Allows you to assign one value to multiple properties simultaneously
@@ -58,7 +62,3 @@
  * @example '@extend grayscale;'
  */
 @import "mixins/grayscale";
-
-// Note: Directory imports are yet to be implemented in the native Sass language
-// One solution is the Sass Globbing Plugin (https://github.com/chriseppstein/sass-globbing),
-// but this creates an additional dependency for projects with multiple authors.
