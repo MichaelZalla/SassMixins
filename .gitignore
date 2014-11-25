@@ -1,2 +1,6 @@
-.sass-cache
+# OS files
 .DS_Store
+[T,t]humbs.db
+
+# Sass files
+.sass-cache
