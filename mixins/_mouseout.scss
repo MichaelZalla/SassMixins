@@ -1,0 +1,12 @@
+/**
+ * @file _mouseout.scss
+ * @author Michael Zalla
+ * @date 12-01-2014
+ * 
+ * Contains a Sass mixin that provides improved symantics when defining
+ * pointer-dependent styles on page elements.
+ */
+
+@mixin mouseout($property, $value) {
+	&:not(:hover) { #{$property}: $value; }
+}

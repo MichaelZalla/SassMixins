@@ -13,7 +13,7 @@
 /**
  * @desc 	Allows you to assign one value to multiple properties simultaneously
  * @param 	$values[] 	A list of properties followed by a single property value
- * @example '@import same(padding-left, padding-right, 18px);'
+ * @example '@include same(padding-left, padding-right, 18px);'
  */
 @import "mixins/same";
 
@@ -21,9 +21,19 @@
  * @desc 	Auto-prefixing for CSS properties that are still experimental/proprietary
  * @param 	$property The base name of a given property
  * @param 	$value The value to assign to that property
- * @example '@import vendorize("transition", color 0.5s linear);'
+ * @example '@include vendorize("transition", color 0.5s linear);'
  */
 @import "mixins/vendorize";
+
+/**
+ * @desc Provides better semantics for defining pointer-dependent styles.
+ * @param 	property 	A given property name
+ * @param 	value 		The value for that property, for the given state
+ * @example '@include mouseover(color, $lighter-blue);'
+ * @example '@include mouseout(color, $darker-blue);'
+ */
+@import "mixins/mouseover";
+@import "mixins/mouseout";
 
 /**
  * @desc 	Allows you to quickly make new web fonts available in your stylesheets
@@ -31,7 +41,7 @@
  * @param 	$source An absolute or relative path to the font file
  * @param 	$weight (optional)
  * @param 	$style (optional)
- * @example '@import fontface("Avenir", "../fonts/avenir/Avenir-Regular");'
+ * @example '@include fontface("Avenir", "../fonts/avenir/Avenir-Regular");'
  */
 @import "mixins/fontface";
 
@@ -43,7 +53,7 @@
  * @param 	$fontFamily (optional)
  * @param 	$fontWeight (optional)
  * @param 	$fontStyle (optional)
- * @example '@import typeset(1.125rem, 1.5, 0em, "Avenir");'
+ * @example '@include typeset(1.125rem, 1.5, 0em, "Avenir");'
  */
 @import "mixins/typeset";
 
@@ -53,7 +63,7 @@
  * @param 	$size (optional)
  * @param 	$position (optional)
  * @param 	$repeat (optional)
- * @example '@import background("../img/hero-background.jpg");'
+ * @example '@include background("../img/hero-background.jpg");'
  */
 @import "mixins/background";
 
