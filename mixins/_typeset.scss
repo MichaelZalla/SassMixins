@@ -7,9 +7,8 @@
  * and other selectors with a collection of font-related properties.
  * Note that all parameters are provided with default values.
  *
- * That $type-base-point-size and $type-base-line-height can be defined
- * elswhere (before or after the '@include') in your Sass project environment
- * if necessary.
+ * Note that $type-base-point-size and $type-base-line-height can be
+ * re-defined elsewhere if necessary, before or after the '@include'.
  */
 
 // Variable defaults (can be overwritten but will not overwrite)
