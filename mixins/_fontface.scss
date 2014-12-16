@@ -29,9 +29,9 @@ $font-weight-bold: 		700 !default;
 		font-weight: 	$weight;
 
 		src: url('#{$source}.eot?') format('eot'),
-			 url('#{$source}.woff') format('woff'),
-			 url('#{$source}.otf ') format('opentype'),
-			 url('#{$source}.ttf ') format('truetype');
+			 url('#{$source}.ttf')  format('truetype'),
+			 url('#{$source}.otf')  format('opentype'),
+			 url('#{$source}.woff') format('woff');
 	
 	}
 
